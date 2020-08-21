@@ -1,0 +1,11 @@
+/* GENERAL */
+
+body {
+    margin: 0;
+}
+
+/* CANVAS */
+
+canvas {
+    display: block;
+}
