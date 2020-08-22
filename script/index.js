@@ -42,6 +42,14 @@ const sphereSize = 2;
 const pointLightHelper = new THREE.PointLightHelper(pointLight, sphereSize);
 scene.add(pointLightHelper)
 
+
+const handleResize = () => {
+    const { innerWidth, innerHeight } = window;
+    renderer.setSize(innerWidth, innerHeight);
+    camera.aspect = innerWidth / innerHeight;
+    camera.updateProjectionMatrix();
+}
+
 const render = function () {
     requestAnimationFrame(render);
 
@@ -58,3 +66,4 @@ const render = function () {
 camera.position.z = 55;
 
 render();
+window.addEventListener('resize', handleResize);
